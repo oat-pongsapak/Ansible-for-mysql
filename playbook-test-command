@@ -1,0 +1,7 @@
+---
+- name: Execute a shell command
+  hosts: 192.162.2.70
+  tasks:
+    - name: Execute the command
+      ansible.builtin.shell:
+        cmd: systemctl status keepalive
