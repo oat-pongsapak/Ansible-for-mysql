@@ -4,4 +4,4 @@
   tasks:
     - name: Execute the command
       ansible.builtin.shell:
-        cmd: systemctl status keepalive
+        cmd: mkdir /home/thunchra/test-ansible
