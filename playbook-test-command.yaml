@@ -1,6 +1,6 @@
 ---
 - name: Execute a shell command
-  hosts: 192.162.2.70
+  hosts: 192.168.2.70
   tasks:
     - name: Execute the command
       ansible.builtin.shell:
