@@ -6,6 +6,6 @@
   host_key_checking: no
   tasks:
     - name: Execute the command
-      #ansible.builtin.shell:
+      ansible.builtin.shell:
         #cmd: mkdir /home/thunchra/test-ansible
         shell: mkdir /home/thunchra/test-ansible
