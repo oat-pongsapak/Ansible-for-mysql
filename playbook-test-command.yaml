@@ -2,17 +2,22 @@
 - name: Execute a shell command
   hosts: all
   gather_facts: no
- 
+  
   vars:
     ansible_become: yes
     ansible_become_method: enable
     ansible_user: thunchra
     ansible_password: P@ssw0rd
+  vars_prompt:
+    - name: path
+      prompt: What is your path you want to create?
+      private: false
 
+        
   tasks:
     - name: Execute the command
       ansible.builtin.shell:
-        cmd: mkdir /home/thunchra/test-ansible-01
+        cmd: mkdir /home/thunchra/{{ path }}
       register: get
     - debug: var=get.stdout_lines
 
