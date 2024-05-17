@@ -13,4 +13,6 @@
     - name: Execute the command
       ansible.builtin.shell:
         cmd: ls -l
-    
+    register: get
+  - debug: var=get.stdout_lines
+
