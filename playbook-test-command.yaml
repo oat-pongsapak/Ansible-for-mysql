@@ -1,9 +1,13 @@
 ---
 - name: Execute a shell command
   hosts: all
-  remote_user: thunchra
-  password: P@ssw0rd
-  host_key_checking: no
+  gather_facts: no
+ 
+  vars:
+    ansible_become: yes
+    ansible_user: thunchra
+    ansible_password: P@ssw0rd
+
   tasks:
     - name: Execute the command
       ansible.builtin.shell:
