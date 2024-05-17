@@ -1,8 +1,6 @@
 ---
 - name: Execute a shell command
-  hosts: 192.168.2.70
-  username: thunchra
-  password: P@ssw0rd
+  hosts: all
   tasks:
     - name: Execute the command
       ansible.builtin.shell:
