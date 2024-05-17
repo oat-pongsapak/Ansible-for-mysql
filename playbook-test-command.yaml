@@ -8,4 +8,4 @@
     - name: Execute the command
       ansible.builtin.shell:
         #cmd: mkdir /home/thunchra/test-ansible
-        shell: mkdir /home/thunchra/test-ansible
+      shell: mkdir /home/thunchra/test-ansible
