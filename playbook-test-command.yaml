@@ -12,7 +12,7 @@
   tasks:
     - name: Execute the command
       ansible.builtin.shell:
-        cmd: ls -l
+        cmd: mkdir /home/thunchra/test-ansible-01
       register: get
     - debug: var=get.stdout_lines
 
